@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEON CAMPUS: GLITCH SURVIVAL</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <main id="game" tabindex="0">
+    <canvas id="scene"></canvas>
+    <div id="hud" class="hidden">
+      <div class="hud-row"><div class="box">WAVE <b id="wave">1</b> · <span id="timer">00:30</span></div><div class="box">SCORE <b id="score">0</b></div></div>
+      <div class="meters"><div><label>HP</label><i id="hp"></i></div><div><label>XP</label><i id="xp"></i></div></div>
+      <div class="box objective" id="objective">SURVIVE THE WAVE</div><div id="toast"></div>
+    </div>
+    <section id="intro" class="overlay"><div class="card"><p class="code">NEON CAMPUS // GLITCH SURVIVAL</p><h1>START<br><span>THE RUN</span></h1><p>Кампусный контур заражён. Сканер автоматически очищает ближайшие цифровые сущности. Двигайся, собирай Data Shards, прокачивай билд и переживи волны.</p><div class="controls"><span>WASD / стрелки — движение</span><span>Shift — рывок</span><span>Автоатака — сканер сам бьёт ближайшую цель</span></div><button id="start">INITIATE</button></div></section>
+    <section id="upgrade" class="overlay hidden"><div class="card"><p class="code">SYSTEM UPDATE</p><h2>ВЫБЕРИ МОДУЛЬ</h2><div id="upgrade-list"></div></div></section>
+    <section id="end" class="overlay hidden"><div class="card"><p class="code">RUN TERMINATED</p><h1 id="end-title">SYSTEM<br><span>OVERLOADED</span></h1><p id="end-text"></p><button id="restart">RESTART RUN</button></div></section>
+  </main>
+  <script src="src/main.js"></script>
+</body>
+</html>
